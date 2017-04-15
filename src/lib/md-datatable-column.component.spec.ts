@@ -1,6 +1,5 @@
 import './rx-operators';
 import { async, TestBed } from '@angular/core/testing';
-import { MaterialModule } from '@angular/material';
 
 import { MdDataTableColumnComponent } from './md-datatable-column.component';
 import {
@@ -15,9 +14,7 @@ import { MdDatatableActions } from './md-datatable.actions';
 describe('MdDataTableColumnComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        MaterialModule,
-      ],
+      imports: [],
       declarations: [
         MdDataTableColumnComponent,
       ],

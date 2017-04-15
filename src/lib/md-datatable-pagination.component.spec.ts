@@ -1,7 +1,7 @@
 import './rx-operators';
 import { async, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
+import { MdSelectModule, MdButtonModule, MdIconModule } from '@angular/material';
 import { MdDataTablePaginationComponent } from './md-datatable-pagination.component';
 
 describe('MdDataTablePaginationComponent', () => {
@@ -9,7 +9,9 @@ describe('MdDataTablePaginationComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
-        MaterialModule,
+        MdSelectModule,
+        MdButtonModule,
+        MdIconModule,
       ],
       declarations: [
         MdDataTablePaginationComponent,

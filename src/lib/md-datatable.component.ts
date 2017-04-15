@@ -8,6 +8,7 @@ import {
   ContentChild,
   ContentChildren,
   QueryList,
+  forwardRef,
 } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
@@ -51,8 +52,8 @@ export class MdDataTableComponent extends BaseComponent implements OnInit, After
   @Output() selectionChange: EventEmitter<IDatatableSelectionEvent>;
   @Output() sortChange: EventEmitter<IDatatableSortEvent>;
 
-  @ContentChild(MdDataTableHeaderComponent) headerCmp: MdDataTableHeaderComponent;
-  @ContentChildren(MdDataTableRowComponent) rowsCmp: QueryList<MdDataTableRowComponent>;
+  @ContentChild(forwardRef(() => MdDataTableHeaderComponent)) headerCmp: MdDataTableHeaderComponent;
+  @ContentChildren(forwardRef(() => MdDataTableRowComponent)) rowsCmp: QueryList<MdDataTableRowComponent>;
 
   id = `md-datatable-${instanceId++}`;
 
